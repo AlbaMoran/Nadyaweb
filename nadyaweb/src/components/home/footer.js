@@ -1,23 +1,34 @@
-//import { Link } from 'react-router-dom';
-import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+
 import "../../assets/styles/App.css"
+import * as React from 'react';
+import {YouTube, Email }from '@mui/icons-material';
+import { AppBar, Button } from "@mui/material";
 
+export default function Footer() {
+ 
 
-function Footer() {
-  
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container fixed>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
-      </Container>
-    </React.Fragment>
+    <>
+    <AppBar className="footerContainer" >
+    <div className="footerText">
+      Nadya Poklad
+    </div>
+    <div className="footerIcons">
+          <Button variant="">
+            <YouTube />
+          </Button>
+          <Button variant="">
+            <Email />
+          </Button>
+      
+    </div>
+   
+      <div className='registerBy'>
+       Design by Araceli Catalano & Alba Morán   <br/>
+      © Nadya Podlak
+      </div>
+
+      </AppBar>
+  </>
   );
-
-
 }
-    
-export default Footer;

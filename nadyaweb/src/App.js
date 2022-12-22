@@ -3,8 +3,14 @@ import Footer from './components/home/Footer'
 function App() {
   return (
     <>
-      NADYA WEB
+      <div>
 
+      NADYA WEB
+      
+      </div>
+
+      
+      
       <Footer />
     </>
   );
