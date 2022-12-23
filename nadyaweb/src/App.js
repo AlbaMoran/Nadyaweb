@@ -7,7 +7,8 @@ function App() {
      
       <Header />
       <div>
-        añigjñldkjgñ
+        
+        Proximamente un preciosísimo HOME que va a diseñar Araceli ☻ ♥
 
       </div>
 

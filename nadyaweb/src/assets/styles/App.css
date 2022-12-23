@@ -1,9 +1,32 @@
 /* Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 body {
-    background-color: #43555c;
-    color: white;
+  font-family: "Poppins";
+  font-size: 14px;
+  margin-top:90px;
+  margin-left: 15px;
+  background-color: #43555c;
+  color: white;
     
 }
+
+/* Header */
+
+.headerMenu{
+   margin-left: auto;
+   justify-content: flex-end !important;
+    
+}
+.menuIcon{
+    display: flex;
+    margin-left: auto ;
+}
+
 
 
 /* Footer Mobile */
@@ -17,11 +40,11 @@ body {
 }
 
 .footerContainer {
-    position:'fixed';
+    /*position:'fixed';*/
     width: 100%;
     background-color: #2f434a !important;
     color: white !important;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     text-align: center;
   
 }

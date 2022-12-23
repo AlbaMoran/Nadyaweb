@@ -13,7 +13,20 @@ export default function Footer() {
     <div className="footerText">
       Nadya Poklad
     </div>
-    
+    <div className="footerIcons">
+          <Button variant="">
+            <YouTube />
+          </Button>
+          <Button variant="">
+            <Email />
+          </Button>
+
+    </div>
+
+      <div className='registerBy'>
+       Design by Araceli Catalano & Alba Morán   <br/>
+      © Nadya Podlak
+      </div>
 
       </AppBar>
   </>

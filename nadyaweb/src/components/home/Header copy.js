@@ -1,41 +1,46 @@
 
 import "../../assets/styles/App.css"
 import * as React from 'react';
-import {AppBar,Box,Toolbar, IconButton,Typography,Menu,Container,Button,MenuItem} from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-
-// import Tooltip from '@mui/material/Tooltip';
-// import Avatar from '@mui/material/Avatar';
-
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
 
 
 const pages = ['The Artist', 'Works', 'Engage', 'Upcoming Events','Contact'];
-// const worksPages = ['Composer', 'Pianist', 'Educator'];
-// const settings = ['Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Header () {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  //const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
   return (
     <AppBar className="footerContainer">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disbleGutters>
           <Typography
             variant="h6"
             noWrap
@@ -50,7 +55,6 @@ export default function Header () {
               textDecoration: 'none',
               fontSize: 24 ,
 
-
             }}
           >
             Nadya Poklad
@@ -59,36 +63,30 @@ export default function Header () {
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
+              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit">
-
-              <div className="menuIcon">
-                <MenuIcon />
-              </div>  
-            
+              color="inherit"
+            >
+              <MenuIcon />
             </IconButton>
-          </Box>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-           
-              <Menu
+            <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'right',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'flex', md: 'none' },
+                display: { xs: 'block', md: 'none' },
               }}
             >
               { pages.map((page) => (
@@ -96,23 +94,21 @@ export default function Header () {
                   <Typography 
                     sx={{
                       mr: 2,
-                      display: { xs: 'flex', md: 'flex' },
+                      display: { xs: 'none', md: 'flex' },
                       fontFamily: 'Marcellus',
                       fontWeight: 400,
                       color: 'Black',
                       textDecoration: 'none',
-                      fontSize: 20
+                      fontSize: 24
                     }}>
                       {page}
                   </Typography>
                 </MenuItem>
               )) }
-             
-              </Menu>
+            </Menu>
           </Box>
-            
+          
           <Typography
-            className="headerMenu"
             noWrap
             component="a"
             href=""
@@ -125,24 +121,24 @@ export default function Header () {
               fontSize: 24,
               color: 'inherit',
               textDecoration: 'none',
+              textTransform: 'capitalize' 
             }}
           >
              Nadya Poklad
           </Typography>
 
-        <div className="headerMenu">
-          <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }} >
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-              key={page}
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', textTransform: 'capitalize', fontFamily: 'Marcellus' }}
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
           </Box>
-        </div>
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
