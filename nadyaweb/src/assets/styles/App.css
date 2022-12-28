@@ -25,7 +25,25 @@ body {
 .menuIcon{
     display: flex;
     margin-left: auto ;
+    justify-content: flex-end !important;
 }
+
+.menu-appbarMobile  {  
+    background-color: #2f434a !important;
+    color: white !important;
+    text-transform: capitalize !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: start !important;
+  
+    display: contents;
+
+}
+
+
+
+
+
 
 
 
@@ -58,4 +76,8 @@ body {
 .registerBy{
     margin-top: 15px;
     font-size: 10px;
+}
+
+.buttonSx{
+    color: 'white' !important;
 }
