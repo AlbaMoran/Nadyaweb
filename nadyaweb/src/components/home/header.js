@@ -1,6 +1,6 @@
 import "../../assets/styles/App.css"
 import * as React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, ButtonGroup,  List, ListItemText,  Collapse, ListItemButton } from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, ButtonGroup, List, ListItemText, Collapse, ListItemButton, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
@@ -36,7 +36,7 @@ export default function Header() {
   };
 
   return (
-  <>
+    <>
       <AppBar className="footerContainer">
         <Container maxWidth="xl">
           <Toolbar disableGutters >
@@ -69,7 +69,7 @@ export default function Header() {
                 </IconButton>
               </div>
 
-              
+
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -86,49 +86,49 @@ export default function Header() {
                 onClose={handleCloseNavMenu}
                 sx={{
                   display: { xs: 'block', md: 'none' },
-                
-                
+
+
                 }}
-                >
+              >
 
-              <ButtonGroup className="menu-appbarMobile">
+                <ButtonGroup className="menu-appbarMobile">
 
-              <Button className="menu-appbarMobile"> The Artist </Button>
-                <ListItemButton onClick={handleClickMenu}>
-                  
-                <ListItemText primary="Works" />
-                  {openSubMenu ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-              <Collapse in={openSubMenu} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                  <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemText primary="Composer" />
+                  <Button className="menu-appbarMobile"> The Artist </Button>
+                  <ListItemButton onClick={handleClickMenu}>
+                    <Divider />
+                    <ListItemText primary="Works" />
+                    {openSubMenu ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemText primary="Pianist" />
-                  </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemText primary="Musical event organizer" />
-                  </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemText primary="Teacher" />
-                  </ListItemButton>
-                </List>
-              </Collapse>
-           
-              <Button className="menu-appbarMobile"> Engage </Button>
-              
-              <Button className="menu-appbarMobile"> Upcoming Events </Button>
-              
-              <Button className="menu-appbarMobile"> Contact </Button>
-              
-              </ButtonGroup>
+                  <Collapse in={openSubMenu} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemText primary="Composer" />
+                      </ListItemButton>
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemText primary="Pianist" />
+                      </ListItemButton>
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemText primary="Musical event organizer" />
+                      </ListItemButton>
+                      <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemText primary="Teacher" />
+                      </ListItemButton>
+                    </List>
+                  </Collapse>
+
+                  <Button className="menu-appbarMobile"> Engage </Button>
+
+                  <Button className="menu-appbarMobile"> Upcoming Events </Button>
+
+                  <Button className="menu-appbarMobile"> Contact </Button>
+
+                </ButtonGroup>
               </Menu>
             </Box>
-         </Toolbar>
+          </Toolbar>
         </Container>
       </AppBar>
-  </>
-  
-    )
+    </>
+
+  )
 }

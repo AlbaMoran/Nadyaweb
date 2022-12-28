@@ -29,14 +29,27 @@ body {
 }
 
 .menu-appbarMobile  {  
-    background-color: #2f434a !important;
-    color: white !important;
+    background-color: #C2CED6 !important;
+    color: black !important;
     text-transform: capitalize !important;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: start !important;
     display: contents;
+    opacity: 85%;
+    
 
+
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-color: #acd8ec !important;
+}
+
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+    border-color: #2F434A !important;
 }
 
 
