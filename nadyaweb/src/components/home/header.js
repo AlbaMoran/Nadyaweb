@@ -108,7 +108,10 @@ export default function Header() {
                     <ListItemText primary="Pianist" />
                   </ListItemButton>
                   <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemText primary="Educator" />
+                    <ListItemText primary="Musical event organizer" />
+                  </ListItemButton>
+                  <ListItemButton sx={{ pl: 4 }}>
+                    <ListItemText primary="Teacher" />
                   </ListItemButton>
                 </List>
               </Collapse>
@@ -128,4 +131,4 @@ export default function Header() {
   </>
   
     )
-  }
+}
